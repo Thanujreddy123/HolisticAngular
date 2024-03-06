@@ -1,0 +1,18 @@
+.add-task{
+    padding:1opx 12px 0 12px;
+}
+header{
+    background: #f3f5fa;
+    padding:20px 12px 20px 12px;
+}
+mat-form-field{
+    width:100%;
+}
+textarea{
+    height: 250px !important;
+}
+.total{
+justify-content: center;
+display: flex;
+flex-direction: column;
+}

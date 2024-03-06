@@ -1,0 +1,15 @@
+<!-- your-component.component.html -->
+<div class="home">
+  <div class="header">
+    <h1>Dashboard</h1>
+      <div class="chartdisplay">
+        <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"></apx-chart>
+      </div>
+      <div *ngFor="let n of typeData" class="total task analytics">
+          <div>
+            <p class="data" [ngClass]="n.type.toLowerCase()">{{ n.count }}</p>
+            <p class="data-type" [ngClass]="n.type.toLowerCase()">{{ n.type }}</p>
+          </div>
+  </div>
+</div>
+<app-list (refreshEmitter)="refreshEmitter()"></app-list>

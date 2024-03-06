@@ -1,0 +1,59 @@
+h1 {
+    background-color: #394240;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+  .chartdisplay {
+    width: 40%;
+    height: 350px;
+  }
+  
+  .total.task.analytics {
+    display: inline-flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f0f3f4; /* Light blue background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .total.task.analytics > div {
+    margin-right: 15px;
+  }
+  
+  .data,
+  .data-type {
+    margin: 0;
+  }
+  
+  .data {
+    font-size: 18px;
+  }
+  
+  .data-type {
+    font-weight: bold;
+    font-size: 16px;
+    color: #5e5e5e;
+  }
+  
+  /* Apply colors based on task type */
+  .todo {
+    color: #2ecc71; /* Green color for 'todo' */
+  }
+  
+  .done {
+    color: #3498db; /* Blue color for 'done' */
+  }
+  
+  .pending {
+    color: #e67e22; /* Orange color for 'pending' */
+  }
+  

@@ -1,0 +1,35 @@
+
+  .list {
+    background: #f3f5fa;
+    margin-bottom: 35px;
+  }
+  mat-selection-list {
+    height: 100%;
+  }
+  .mat-list-option-cover {
+    padding: 5px;
+  }
+  mat-list-option {
+    
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .mat-list-item {
+    height: 70px !important;
+  }
+  .task-date {
+    color: #ccc;
+  }
+  h1 {
+    display: inline-block; 
+    background-color: #6b6e75;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+  }
