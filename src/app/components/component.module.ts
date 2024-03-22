@@ -9,8 +9,11 @@ import { AppRoutingModule } from '../app-routing.module';
 import { AddComponent } from './task/add/add.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShowComponent } from './task/show/show.component';
+import { AddfilesComponent } from './files/addfiles/addfiles.component';
+import { ListfilesComponent } from './files/listfiles/listfiles.component';
+import { ShowfilesComponent } from './files/showfiles/showfiles.component';
 @NgModule({
-  declarations: [HomeComponent, ListComponent,NavigationComponent, AddComponent, ShowComponent],
+  declarations: [HomeComponent, ListComponent,NavigationComponent, AddComponent, ShowComponent, AddfilesComponent, ListfilesComponent, ShowfilesComponent],
   imports: [
     CommonModule,MaterialsModule,NgxApexchartsModule,AppRoutingModule,ReactiveFormsModule
   ],
