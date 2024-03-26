@@ -1,0 +1,49 @@
+/* Style for the title */
+.titles {
+  text-align: center;
+  margin-top: 100px; /* Add 100px margin from the top */
+  margin-bottom: 20px;
+}
+
+.titles h6 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Style for the file boxes */
+.box {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.box:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.box p {
+  margin: 0;
+}
+
+.box p:first-child {
+  font-weight: bold;
+}
+
+.box p + p {
+  color: #666;
+}
+.fileupload{
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+  

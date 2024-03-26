@@ -18,4 +18,14 @@ export class ListfilesComponent implements OnInit{
     });
   }
 
+  uploadFiles() {
+    // Write logic to handle file upload here
+    console.log('Uploading files...');
+  }
+
+  performAnotherAction() {
+    // Write logic for another action here
+    console.log('Performing another action...');
+  }
+
 }

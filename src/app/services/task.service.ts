@@ -12,7 +12,7 @@ export class TaskService {
   constructor(private httpclient: HttpClient) { }
 
   getFiles(): Observable<IFile[]> {
-    return this.httpclient.get<IFile[]>('http://localhost:8080/api/files');
+    return this.httpclient.get<IFile[]>('http://localhost:8080/api/files/list');
   }
 
   getTaskList(): Observable<ITask[]> {
