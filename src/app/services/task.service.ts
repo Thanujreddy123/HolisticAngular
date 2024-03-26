@@ -15,6 +15,10 @@ export class TaskService {
     return this.httpclient.get<IFile[]>('http://localhost:8080/api/files/list');
   }
 
+  uploadFile(formData: FormData): Observable<any> {
+    return this.httpclient.post('http://localhost:8080/api/files/upload', formData);
+  }
+
   getTaskList(): Observable<ITask[]> {
     return this.httpclient.get<ITask[]>('http://localhost:8080/api/v2/task');
   }

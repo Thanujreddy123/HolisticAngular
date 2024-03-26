@@ -1,17 +1,15 @@
 <div class="titles">
-  <h6>Files List</h6>
-</div>
-
-<div class="box" *ngFor="let file of files">
-  <p>{{ file.name }}</p>
-  <p>{{ file.type }}</p>
-  <p>{{ file.path }}</p>
-</div>
-
-<div class="fileupload">
-  <!-- File input element -->
-  <input type="file" #fileInput>
-
-  <!-- Button for uploading files -->
-  <button mat-raised-button color="primary" (click)="uploadFiles()">Upload File</button>
-</div>
+    <h6>Files List</h6>
+  </div>
+  
+  <div class="box" *ngFor="let file of files">
+    <p>{{ file.name }}</p>
+    <p>{{ file.type }}</p>
+    <p>{{ file.path }}</p>
+  </div>
+  
+  <div>
+    <!-- File input element -->
+    <input type="file" (change)="uploadFile($event)" accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png">
+  </div>
+  
