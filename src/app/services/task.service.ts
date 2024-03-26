@@ -3,12 +3,17 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ITask, ITaskTypeOption, ITypePercentage } from '../interface/task.interface';
 import { map } from 'rxjs/operators';
+import {IFile} from '../interface/files.interface';
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
 
   constructor(private httpclient: HttpClient) { }
+
+  getFiles(): Observable<IFile[]> {
+    return this.httpclient.get<IFile[]>('http://localhost:8080/api/files');
+  }
 
   getTaskList(): Observable<ITask[]> {
     return this.httpclient.get<ITask[]>('http://localhost:8080/api/v2/task');
