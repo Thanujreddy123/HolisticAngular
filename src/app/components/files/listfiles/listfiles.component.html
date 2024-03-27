@@ -6,10 +6,12 @@
     <p>{{ file.name }}</p>
     <p>{{ file.type }}</p>
     <p>{{ file.path }}</p>
+      <button (click)="displayFileContent(file.id)">View File</button>
   </div>
   
   <div>
     <!-- File input element -->
-    <input type="file" (change)="uploadFile($event)" accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png">
+    <h3>Upload</h3>
+    <input class="fileupload" type="file" (change)="uploadFile($event)" accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png">
   </div>
   

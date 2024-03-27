@@ -23,8 +23,7 @@ export class ListfilesComponent implements OnInit {
   }
 
   uploadFile(event: any) {
-    const inputElement = event.target as HTMLInputElement;
-    const fileList: FileList | null = inputElement.files;
+    const fileList: FileList = event.target.files;
     if (fileList && fileList.length > 0) {
       const file: File = fileList[0];
       const formData: FormData = new FormData();
@@ -38,4 +37,27 @@ export class ListfilesComponent implements OnInit {
       });
     }
   }
+
+  displayFileContent(fileId?: number) {
+    if (fileId !== undefined) {
+      this.fileService.getFileContent(fileId).subscribe(
+        (fileContent: string) => {
+          const newWindow = window.open('', '_blank');
+          if (newWindow) {
+            newWindow.document.write(fileContent);
+          } else {
+            alert('Please allow popups for this website');
+          }
+        },
+        error => {
+          console.error('Error fetching file content:', error);
+        }
+      );
+    } else {
+      console.error('File ID is undefined');
+    }
+}
+
+  
+  
 }

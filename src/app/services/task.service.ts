@@ -11,6 +11,10 @@ export class TaskService {
 
   constructor(private httpclient: HttpClient) { }
 
+  getFileContent(fileId: number): Observable<any> {
+    return this.httpclient.get(`http://localhost:8080/api/files/download/${fileId}`, { responseType: 'text' });
+  }
+
   getFiles(): Observable<IFile[]> {
     return this.httpclient.get<IFile[]>('http://localhost:8080/api/files/list');
   }
