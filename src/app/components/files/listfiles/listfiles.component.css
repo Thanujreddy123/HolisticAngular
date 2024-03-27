@@ -45,5 +45,38 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
 }
+/* file-download.component.css */
+
+.action-button {
+    cursor: pointer;
+    padding: 8px 16px;
+    border: none;
+    margin:10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-button {
+    background-color: #4caf50; /* Green */
+    color: white;
+  }
+  
+  .delete-button {
+    background-color: #f44336; /* Red */
+    color: white;
+  }
+  
+  .download-button {
+    background-color: #2196f3; /* Blue */
+    color: white;
+  }
+  
+  /* Hover effect */
+  .action-button:hover {
+    opacity: 0.8;
+  }
+  
 
   

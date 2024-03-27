@@ -6,7 +6,10 @@
     <p>{{ file.name }}</p>
     <p>{{ file.type }}</p>
     <p>{{ file.path }}</p>
-      <button (click)="displayFileContent(file.id)">View File</button>
+    <!--<button class="action-button view-button" (click)="displayFileContent(file.id)">View File</button>-->
+    <button class="action-button view-button" (click)="displayFileContent(file.id)">View File</button>
+    <button class="action-button delete-button" (click)="deleteFile(file.id)">Delete File</button>
+    <button class="action-button download-button" (click)="downloadFile(file.id)">Download File</button>
   </div>
   
   <div>

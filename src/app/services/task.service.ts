@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ITask, ITaskTypeOption, ITypePercentage } from '../interface/task.interface';
@@ -8,12 +8,28 @@ import {IFile} from '../interface/files.interface';
   providedIn: 'root'
 })
 export class TaskService {
+  http: any;
 
   constructor(private httpclient: HttpClient) { }
 
-  getFileContent(fileId: number): Observable<any> {
-    return this.httpclient.get(`http://localhost:8080/api/files/download/${fileId}`, { responseType: 'text' });
+  downloadFile(id: number): Observable<Blob> {
+    const headers = new HttpHeaders().set('Accept', 'application/octet-stream');
+    return this.httpclient.get(`http://localhost:8080/api/files/download/${id}`, {
+      responseType: 'blob',
+      headers: headers
+    });
   }
+  getFileContent(fileId: number): Observable<Blob> {
+    return this.httpclient.get(`http://localhost:8080/api/files/download/${fileId}`, { responseType: 'blob' });
+  }
+
+  //getFileContent(fileId: number): Observable<any> {
+    //return this.httpclient.get(`http://localhost:8080/api/files/download/${fileId}`, { responseType: 'text' });
+//}
+deleteFile(fileId: number): Observable<any> {
+  return this.httpclient.delete(`http://localhost:8080/api/files/delete/${fileId}`);
+}
+
 
   getFiles(): Observable<IFile[]> {
     return this.httpclient.get<IFile[]>('http://localhost:8080/api/files/list');
