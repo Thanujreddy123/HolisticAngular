@@ -12,8 +12,9 @@ import { ShowComponent } from './task/show/show.component';
 import { AddfilesComponent } from './files/addfiles/addfiles.component';
 import { ListfilesComponent } from './files/listfiles/listfiles.component';
 import { ShowfilesComponent } from './files/showfiles/showfiles.component';
+import { ExpenselistComponent } from './expense/expenselist/expenselist.component';
 @NgModule({
-  declarations: [HomeComponent, ListComponent,NavigationComponent, AddComponent, ShowComponent, AddfilesComponent, ListfilesComponent, ShowfilesComponent],
+  declarations: [HomeComponent, ListComponent,NavigationComponent, AddComponent, ShowComponent, AddfilesComponent, ListfilesComponent, ShowfilesComponent, ExpenselistComponent],
   imports: [
     CommonModule,MaterialsModule,NgxApexchartsModule,AppRoutingModule,ReactiveFormsModule
   ],

@@ -5,11 +5,16 @@ import { AddComponent } from './components/task/add/add.component';
 import { ListfilesComponent } from './components/files/listfiles/listfiles.component';
 import { AddfilesComponent } from './components/files/addfiles/addfiles.component';
 import { ShowComponent } from './components/task/show/show.component';
+import { ExpenselistComponent } from './components/expense/expenselist/expenselist.component';
 
 const routes: Routes = [
   {
   path:'',
   component:HomeComponent,
+},
+{
+  path:'expense',
+  component:ExpenselistComponent,
 },
 {
   path:'file',

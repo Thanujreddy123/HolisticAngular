@@ -1,0 +1,118 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+  
+  .titles {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .expense, .income, .bills, .earnings {
+    width: 300px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    border: 2px solid #e67e22;
+    box-shadow: 0 0 10px rgba(133, 70, 70, 0.1);
+    margin: 10px;
+  }
+  
+  .expense h2, .income h2, .bills h2, .earnings h2 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .bills table, .earnings table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .bills th, .bills td, .earnings th, .earnings td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .bills th, .earnings th {
+    background-color: #f2f2f2;
+  }
+  
+  /* expense-income.component.css */
+
+.savings {
+    text-align: center; /* Align the savings text to the center */
+    margin-top: 20px; /* Add some top margin */
+  }
+  
+  .savings-text {
+    font-size: 18px; /* Set the font size of the savings text */
+    color: #333; /* Set the default text color */
+  }
+  
+  .green-text {
+    color: #4CAF50; /* Set the text color to green */
+    font-weight: bold; /* Make the text bold */
+  }
+  
+
+  /* savings-expenses-graph.component.css */
+
+/* savings-expenses-graph.component.css */
+
+.chart {
+    width: 600px;
+    height: 300px;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .savings-bar, .expense-bar {
+    width: 40px;
+    background-color: #007bff;
+    display: inline-block;
+    margin-right: 10px;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .savings-bar {
+    left: calc(10% - 20px);
+  }
+  
+  .expense-bar {
+    left: calc(10% - 20px);
+  }
+  
+  .label {
+    text-align: center;
+    margin-top: 10px;
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+    display: inline-block;
+  }
+  
+  
