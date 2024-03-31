@@ -1,5 +1,8 @@
 <!-- expense-income.component.html -->
+<!-- expense.component.html -->
 
+
+  
 <h1 class="titles">Expense Management System</h1>
 
 <div class="container">
@@ -27,58 +30,38 @@
 
 
 <div class="container">
-  <div class="earnings">
-    <h2>Recent Earning</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Status</th>
-          <th>Due Date</th>
-          <th>Month-Year</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>bills</td>
-          <td>bills</td>
-          <td>bills</td>
-        </tr>
-        <tr>
-            <td>bills</td>
-            <td>bills</td>
-            <td>bills</td>
-          </tr>
-          <tr>
-            <td>bills</td>
-            <td>bills</td>
-            <td>bills</td>
-          </tr>
-          <tr>
-            <td>bills</td>
-            <td>bills</td>
-            <td>bills</td>
-          </tr>
-          <tr>
-            <td>bills</td>
-            <td>bills</td>
-            <td>bills</td>
-          </tr>
-          <tr>
-            <td>bills</td>
-            <td>bills</td>
-            <td>bills</td>
-          </tr>
-      </tbody>
-    </table>
-  </div>
+  
 
   <div class="bills">
     <h2>Recent Bills</h2>
     <table>
       <thead>
         <tr>
-          <th>Status</th>
+          <th>Category</th>
           <th>Due Date</th>
+          <th>Month-Year</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let expense of expenses">
+          <td>{{ expense.category }}</td>
+          <td>{{ expense.dueDate }}</td>
+          <td>{{ expense.currentMonth }}-{{ expense.currentYear }}</td>
+          <td>{{ expense.amount }}</td>
+          <td>{{ expense.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="earnings">
+    <h2>Recent Earning</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>amount</th>
           <th>Month-Year</th>
         </tr>
       </thead>
@@ -88,37 +71,20 @@
           <td>bills</td>
           <td>bills</td>
         </tr>
-        <tr>
-            <td>bills</td>
-            <td>bills</td>
-            <td>bills</td>
-          </tr>
-          <tr>
-            <td>bills</td>
-            <td>bills</td>
-            <td>bills</td>
-          </tr>
-          <tr>
-            <td>bills</td>
-            <td>bills</td>
-            <td>bills</td>
-          </tr>
-          <tr>
-            <td>bills</td>
-            <td>bills</td>
-            <td>bills</td>
-          </tr>
-          <tr>
-            <td>bills</td>
-            <td>bills</td>
-            <td>bills</td>
-          </tr>
-      </tbody>
+    </tbody>
     </table>
   </div>
-
 </div>
 <div class="savings">
     <p class="savings-text">This month's savings: <span class="green-text">Save 50000$</span></p>
   </div>
+
   
+  <!-- expense.component.html -->
+
+
+  <!-- expenselist.component.html -->
+
+<div *ngIf="total6MonthsExpense$ | async as totalExpense">
+  <p>Total 6-Month Expense: {{ totalExpense }}</p>
+</div>

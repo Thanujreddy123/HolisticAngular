@@ -9,8 +9,8 @@
     margin-bottom: 20px;
   }
   
-  .expense, .income, .bills, .earnings {
-    width: 300px;
+   .income, .earnings {
+    width: 250px;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 20px;
@@ -18,6 +18,16 @@
     box-shadow: 0 0 10px rgba(133, 70, 70, 0.1);
     margin: 10px;
   }
+  .expense,.bills{
+    width: 450px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    border: 2px solid #e67e22;
+    box-shadow: 0 0 10px rgba(133, 70, 70, 0.1);
+    margin: 10px;
+  }
+
   
   .expense h2, .income h2, .bills h2, .earnings h2 {
     font-weight: bold;

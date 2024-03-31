@@ -2,15 +2,21 @@ import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ITask, ITaskTypeOption, ITypePercentage } from '../interface/task.interface';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import {IFile} from '../interface/files.interface';
+import { IExpense } from '../interface/expense.interface';
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
   http: any;
+ 
 
   constructor(private httpclient: HttpClient) { }
+  getTotal6MonthsExpense(): Observable<number> {
+    return this.httpclient.get<number>('http://localhost:8080/expense/getTotal6months');
+  }
+
 
   downloadFile(id: number): Observable<Blob> {
     const headers = new HttpHeaders().set('Accept', 'application/octet-stream');
@@ -69,4 +75,12 @@ deleteFile(fileId: number): Observable<any> {
   getTypeOptions():Array<ITaskTypeOption>{
     return [{type:'Todo'},{type:'done'},{type:'pending'}];
   }
+
+  getLastMonthExpenses(): Observable<IExpense[]> {
+    // Call your backend API to retrieve last month's expenses
+    // You may need to adjust the API endpoint based on your backend implementation
+    return this.httpclient.get<IExpense[]>('http://localhost:8080/expense/last-month');
+  }
+
+  
 }

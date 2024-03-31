@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import Chart from 'chart.js/auto';
+import { IExpense } from '../../../interface/expense.interface';
+import { TaskService } from '../../../services/task.service';
 
 @Component({
   selector: 'app-expenselist',
@@ -6,25 +9,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './expenselist.component.css'
 })
 
-export class ExpenselistComponent implements OnInit {
+export class ExpenselistComponent {
+  expenses: IExpense[] = [];
+  
+  total6MonthsExpense$: any;
+  constructor(private taskService: TaskService) { }
+
+ 
+  
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-  expensesData = [
-    { month: 'Jan', amount: 500 },
-    { month: 'Feb', amount: 600 },
-    { month: 'Mar', amount: 700 },
-    // Add data for other months
-  ];
-
-  calculateHeight(expense: any): number {
-    // Calculate height based on expense amount
-    // You can adjust this calculation based on your preference
-    return (expense.amount / this.getMaxExpense()) * 100;
-  }
-
-  getMaxExpense(): number {
-    // Get the maximum expense amount to scale the bars
-    return Math.max(...this.expensesData.map(expense => expense.amount));
+    this.total6MonthsExpense$ = this.taskService.getTotal6MonthsExpense();
+    this.taskService.getLastMonthExpenses().subscribe(
+      (expenses: IExpense[]) => {
+        this.expenses = expenses;
+      },
+      (error) => {
+        console.error('Error fetching last month expenses:', error);
+      }
+    );
   }
 }
+
+
