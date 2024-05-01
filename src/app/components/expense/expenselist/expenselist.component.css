@@ -10,7 +10,7 @@
   }
   
    .income, .earnings {
-    width: 250px;
+    width: 450px;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 20px;
@@ -125,4 +125,33 @@
     display: inline-block;
   }
   
+  .expense-container {
+    margin-top: 20px;
+  }
+  
+  .heading {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .expense-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .expense-table th,
+  .expense-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .expense-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .expense-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
   

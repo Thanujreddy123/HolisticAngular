@@ -9,25 +9,40 @@
   <div class="expenses">
     <div class="expense">
       <h2>Expense $20,000</h2>
-      <button>Expense</button>
-      <button>Add Expense</button>
+      <button >Expense</button>
+      <button (click)="addExpense()">Add Expense</button>
     </div>
   </div>
 
+  <!--
   <div class="incomes">
     <div class="income">
       <h2>Income $75,000</h2>
       <button>Income</button>
       <button>Add Income</button>
     </div>
-  </div>
+  </div>-->
 <!-- expense-bar-graph.component.html -->
-
-  
 
   <!--this is new comment-->
 </div>
-
+<div class="expense-container" *ngIf="total6MonthsExpense | async as totalExpense">
+    <p class="heading">Total 6-Month Expense:</p>
+    <table class="expense-table">
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let expense of totalExpense">
+          <td>{{ expense[0] }}</td>
+          <td>{{ expense[1] }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 <div class="container">
   
@@ -55,6 +70,7 @@
       </tbody>
     </table>
   </div>
+  <!--
   <div class="earnings">
     <h2>Recent Earning</h2>
     <table>
@@ -74,6 +90,8 @@
     </tbody>
     </table>
   </div>
+
+-->
 </div>
 <div class="savings">
     <p class="savings-text">This month's savings: <span class="green-text">Save 50000$</span></p>
@@ -85,6 +103,8 @@
 
   <!-- expenselist.component.html -->
 
-<div *ngIf="total6MonthsExpense$ | async as totalExpense">
-  <p>Total 6-Month Expense: {{ totalExpense }}</p>
-</div>
+  
+  
+
+  
+  

@@ -13,8 +13,8 @@ export class TaskService {
  
 
   constructor(private httpclient: HttpClient) { }
-  getTotal6MonthsExpense(): Observable<number> {
-    return this.httpclient.get<number>('http://localhost:8080/expense/getTotal6months');
+  getTotal6MonthsExpense(): Observable<any[]> {
+    return this.httpclient.get<any[]>('http://localhost:8080/expense/getTotal6months');
   }
 
 
